@@ -185,6 +185,13 @@
   .about-tabs__left .tab-btn {
     height: auto;
     padding: vw(20px) vw(10px);
+    &::after {
+      width: vw(24px);
+      height: vw(20px);
+      bottom: vw(10px);
+      right: vw(10px);
+      transform: rotate(90deg);
+    }
   }
   .about-tabs__left .tab-btn {
     span {

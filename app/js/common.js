@@ -127,26 +127,7 @@ function changeTab() {
     } else {
         let activeTab = 0;
 
-        var myInterval = setInterval(myTimer, 4500);
 
-        function myTimer() {
-            if (activeTab === 2) {
-                activeTab = 0;
-            } else {
-                activeTab += 1;
-            }
-            tabBtn[activeTab].click();
-        }
-
-        function myStopFunction() {
-            clearInterval(myInterval);
-        }
-        document.querySelector('.about-tabs').addEventListener('mouseover', () => {
-            myStopFunction()
-        });
-        document.querySelector('.about-tabs').addEventListener('mouseout', () => {
-            myInterval = setInterval(myTimer, 4500);
-        });
         tabBtn.forEach((btn, k) => {
 
             btn.addEventListener('click', () => {
@@ -165,7 +146,6 @@ function changeTab() {
 
                         }
                     });
-                    activeTab = k;
                 }
             });
 
